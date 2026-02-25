@@ -9,7 +9,7 @@ install:
     if [[ ! -f "hardware-configuration.nix" ]]; then
         cp /etc/nixos/hardware-configuration.nix .
     fi
-    sudo nixos-rebuild switch --experimental-features 'nix-command flakes' --flake .
+    NIX_EXPERIMENTAL_FEATURES="nix-command flakes" sudo nixos-rebuild switch --flake .
 
 update:
     nix flake update
