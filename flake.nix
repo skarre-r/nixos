@@ -1,5 +1,5 @@
 {
-  description = "";
+  description = "NixOS config";
 
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-25.11";
@@ -25,8 +25,10 @@
             })
           ];
         }
+
         # config
         ./configuration.nix
+
         # home-manager
         home-manager.nixosModules.home-manager {
           home-manager = {
