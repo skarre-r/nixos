@@ -1,9 +1,14 @@
-{ config, lib, pkgs, ... }:
+{
+  config,
+  lib,
+  pkgs,
+  ...
+}:
 
 {
   system.stateVersion = "25.11";
 
-  imports = [];
+  imports = [ ];
 
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
@@ -20,12 +25,17 @@
 
   environment.systemPackages = with pkgs; [
     vim
+    wget
     git
+    just
   ];
 
   fonts.packages = with pkgs; [
     nerd-fonts.jetbrains-mono
   ];
 
-  nix.settings.experimental-features = [ "nix-command" "flakes" ];
+  nix.settings.experimental-features = [
+    "nix-command"
+    "flakes"
+  ];
 }
