@@ -15,10 +15,11 @@
       self,
       nixpkgs,
       nixpkgs-unstable,
+      home-manager,
       ...
     }:
     {
-      nixosConfigurations.default = nixos.lib.nixosSystem {
+      nixosConfigurations.default = nixpkgs.lib.nixosSystem {
         system = "x86_64-linux";
         modules = [
           # "pkgs.unstable" overlay
