@@ -19,35 +19,37 @@
       ...
     }:
     {
-      nixosConfigurations.default = nixpkgs.lib.nixosSystem {
-        system = "x86_64-linux";
-        modules = [
-          # "pkgs.unstable" overlay
-          {
-            nixpkgs.overlays = [
-              (final: prev: {
-                unstable = import nixpkgs-unstable {
-                  inherit (final) config;
-                  inherit (final.stdenv.hostPlatform) system;
-                };
-              })
-            ];
-          }
+      nixosConfigurations = {
+        "lenovo-t14s-gen6" = nixpkgs.lib.nixosSystem {
+          system = "x86_64-linux";
+          modules = [
+            # "pkgs.unstable" overlay
+            {
+              nixpkgs.overlays = [
+                (final: prev: {
+                  unstable = import nixpkgs-unstable {
+                    inherit (final) config;
+                    inherit (final.stdenv.hostPlatform) system;
+                  };
+                })
+              ];
+            }
 
-          # config
-          ./configuration.nix
+            # config
+            ./configuration.nix
 
-          # home-manager
-          home-manager.nixosModules.home-manager
-          {
-            home-manager = {
-              useGlobalPkgs = true;
-              useUserPackages = true;
-              users.skar = import ./home.nix;
-              backupFileExtension = "backup";
-            };
-          }
-        ];
+            # home-manager
+            home-manager.nixosModules.home-manager
+            {
+              home-manager = {
+                useGlobalPkgs = true;
+                useUserPackages = true;
+                users.skar = import ./home.nix;
+                backupFileExtension = "backup";
+              };
+            }
+          ];
+        };
       };
     };
 }
