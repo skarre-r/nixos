@@ -20,7 +20,7 @@
     }:
     {
       nixosConfigurations = {
-        "lenovo-t14s-gen6" = nixpkgs.lib.nixosSystem {
+        "thinkpad" = nixpkgs.lib.nixosSystem {
           system = "x86_64-linux";
           modules = [
             # "pkgs.unstable" overlay
