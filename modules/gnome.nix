@@ -16,7 +16,11 @@
     games.enable = false;
   };
 
-  environment.gnome.excludePackages = [ ]; # TODO
+  environment.gnome.excludePackages = with pkgs; [
+    gnome-tour
+    gnome-weather
+    gnome-console
+  ];
 
   programs.dconf.profiles.user.databases = [
     {
