@@ -6,7 +6,7 @@
 }:
 
 {
-  imports = [ ./ hardware-configuration.nix ];
+  imports = [ /etc/nixos/hardware-configuration.nix ];
 
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
@@ -32,8 +32,8 @@
   };
 
   services.xserver.enable = true;
-  services.xserver.displayManager.gdm.enable = true;
-  services.xserver.desktopManager.gnome.enable = true;
+  services.displayManager.gdm.enable = true;
+  services.desktopManager.gnome.enable = true;
 
   services.xserver.xkb = {
     layout = "no";
@@ -43,7 +43,7 @@
 
   services.printing.enable = true;
 
-  services.pulseaudio.enable = true;
+  services.pulseaudio.enable = false;
   security.rtkit.enable = true;
   services.pipewire = {
     enable = true;
@@ -54,8 +54,10 @@
 
   users.users.skar = {
     isNormalUser = true;
-    extraGroups = [ "wheel" "networkmanager" ];
-    packages = [  ];
+    extraGroups = [
+      "wheel"
+      "networkmanager"
+    ];
   };
 
   programs.firefox.enable = true;
