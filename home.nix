@@ -11,7 +11,6 @@
     cilium-cli
     golangci-lint
     # helix
-    # neovim
     # obsidian
     protonmail-desktop
     # _1password-gui

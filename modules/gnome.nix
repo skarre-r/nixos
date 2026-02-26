@@ -22,11 +22,11 @@
     gnome-console
   ];
 
-  programs.gnome-shell = {
-    enable = true;
-    extensions = [ ];
-    theme = null;
-  };
+  #programs.gnome-shell = {
+  #  enable = true;
+  #  extensions = [ ];
+  #  theme = null;
+  #};
 
   programs.dconf.profiles.user.databases = [
     {
