@@ -12,6 +12,13 @@
     golangci-lint
     helix
     neovim
+    obsidian
+    protonmail-desktop
+    _1password-gui
+    vscodium
+    jetbrains.goland
+    freetube
+    sublime
   ];
 
   programs.git = {
