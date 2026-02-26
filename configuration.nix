@@ -52,15 +52,26 @@
     pulse.enable = true;
   };
 
+  users.defaultUserShell = pkgs.zsh;
   users.users.skar = {
     isNormalUser = true;
     extraGroups = [
       "wheel"
       "networkmanager"
     ];
+    shell = pkgs.fish;
+    useDefaultShell = false;
   };
 
-  programs.firefox.enable = true;
+  programs.firefox = {
+    enable = true;
+  };
+  programs.fish = {
+    enable = true;
+  };
+  programs.zsh = {
+    enable = true;
+  };
 
   nixpkgs.config.allowUnfree = true;
 
@@ -103,6 +114,14 @@
     tmux
     uv
     zsh
+    python314
+  ];
+
+  environment.shells = with pkgs; [
+    bash
+    fish
+    zsh
+    nushell
   ];
 
   fonts.packages = with pkgs; [
