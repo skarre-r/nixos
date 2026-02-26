@@ -1,7 +1,5 @@
 {
-  config,
   pkgs,
-  lib,
   ...
 }:
 
@@ -15,7 +13,7 @@
     games.enable = false;
   };
 
-  environment.gnome.excludePackages = with pkgs; [ ];
+  environment.gnome.excludePackages = [ ]; # TODO
 
   programs.dconf.profiles.user.databases = [
     {
