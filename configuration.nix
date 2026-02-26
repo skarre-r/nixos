@@ -13,7 +13,7 @@
 
   boot.kernelPackages = pkgs.linuxPackages_latest;
 
-  networking.hostName = "lenovo-t14s-gen6";
+  networking.hostName = "thinkpad";
   networking.networkmanager.enable = true;
 
   time.timeZone = "Europe/Oslo";
