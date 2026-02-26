@@ -64,14 +64,212 @@
     useDefaultShell = false;
   };
 
-  programs.firefox = {
-    enable = true;
-  };
-  programs.fish = {
-    enable = true;
-  };
-  programs.zsh = {
-    enable = true;
+  # TODO: use home-manager instead?
+  programs = {
+    _1password = {
+      enable = true;
+      package = pkgs._1password-gui;
+    };
+    atuin = {
+      enable = true;
+      enableBashIntegration = true;
+      enableFishIntegration = true;
+      enableZshIntegration = true;
+      enableNushellIntegration = true;
+      package = pkgs.atuin;
+      settings = '''';
+    };
+    bat = {
+      enable = true;
+      package = pkgs.bat;
+    };
+    btop = {
+      enable = true;
+      package = pkgs.btop;
+    };
+    chromium = {
+      enable = false;
+      extensions = [ ];
+    };
+    eza = {
+      enable = true;
+      enableBashIntegration = true;
+      enableFishIntegration = true;
+      enableZshIntegration = true;
+      enableNushellIntegration = true;
+      package = pkgs.eza;
+    };
+    fd = {
+      enable = true;
+      package = pkgs.fd;
+    };
+    firefox = {
+      enable = true;
+      package = pkgs.firefox;
+      preferences = { };
+    };
+    fish = {
+      enable = true;
+      package = pkgs.fish;
+      binds = { };
+      functions = { };
+      shellAbbrs = {
+        gs = "git status -sb";
+      };
+      shellAliases = { };
+    };
+    freetube = {
+      enable = true;
+      package = pkgs.freetube;
+      settings = { };
+    };
+    fzf = {
+      enable = true;
+      package = pkgs.fzf;
+    };
+    ghostty = {
+      enable = true;
+      enableBashIntegration = true;
+      enableFishIntegration = true;
+      enableZshIntegration = true;
+      package = pkgs.ghostty;
+      settings = { };
+    };
+    git = {
+      enable = true;
+      package = pkgs.git;
+      settings = { };
+    };
+    go = {
+      enable = true;
+      package = pkgs.go;
+      telemetry.mode = "off";
+    };
+    helix = {
+      enable = true;
+      package = pkgs.helix;
+      defaultEditor = false;
+      settings = { };
+    };
+    jujutsu = {
+      enable = true;
+      package = pkgs.jujutsu;
+      settings = { };
+    };
+    k9s = {
+      enable = true;
+      package = pkgs.k9s;
+      settings = { };
+      aliases = { };
+    };
+    lazygit = {
+      enable = true;
+      enableBashIntegration = true;
+      enableFishIntegration = true;
+      enableZshIntegration = true;
+      enableNushellIntegration = true;
+      package = pkgs.lazygit;
+      settings = { };
+    };
+    librewolf = {
+      enable = true;
+      enableGnomeExtensions = false; # TODO
+      package = pkgs.librewolf;
+      policies = { };
+      profiles = { };
+      settings = { };
+    };
+    nano = {
+      enable = true;
+      package = pkgs.nano;
+      syntaxHighlight = true;
+    };
+    neovim = {
+      enable = true;
+      package = pkgs.neovim;
+      defaultEditor = false;
+    };
+    nushell = {
+      enable = true;
+      package = pkgs.nushell;
+      settings = { };
+    };
+    obsidian = {
+      enable = true;
+      package = pkgs.obsidian;
+      defaultSettings = {
+        app = { };
+        appearance = { };
+        communityPlugins = [ ];
+        # corePlugins = [ ];
+        hotkeys = { };
+        themes = [ ];
+      };
+    };
+    rclone = {
+      enable = true;
+      package = pkgs.rclone;
+    };
+    ripgrep = {
+      enable = true;
+      package = pkgs.ripgrep;
+    };
+    starship = {
+      enable = true;
+      enableBashIntegration = true;
+      enableFishIntegration = true;
+      enableZshIntegration = true;
+      enableNushellIntegration = true;
+      package = pkgs.starship;
+      transientPrompt.enable = false;
+      enableInteractive = true;
+      enableTransience = false;
+      interactiveOnly = true;
+      settings = { };
+    };
+    tmux = {
+      enable = true;
+      package = pkgs.tmux;
+    };
+    uv = {
+      enable = true;
+      package = pkgs.uv;
+      settings = { };
+    };
+    vim = {
+      enable = true;
+      package = pkgs.vim;
+      defaultEditor = true;
+      settings = { };
+    };
+    yazi = {
+      enable = true;
+      enableBashIntegration = true;
+      enableFishIntegration = true;
+      enableZshIntegration = true;
+      enableNushellIntegration = true;
+      package = pkgs.yazi;
+      settings = { };
+    };
+    zellij = {
+      enable = true;
+      enableBashIntegration = true;
+      enableFishIntegration = true;
+      enableZshIntegration = true;
+      package = pkgs.zellij;
+      settings = { };
+    };
+    zoxide = {
+      enable = true;
+      enableBashIntegration = true;
+      enableFishIntegration = true;
+      enableZshIntegration = true;
+      package = pkgs.zoxide;
+    };
+    zsh = {
+      enable = true;
+      package = pkgs.zsh;
+    };
   };
 
   nixpkgs.config.allowUnfree = true;
@@ -116,6 +314,12 @@
     uv
     zsh
     python314
+    freetube
+    obsidian
+    neovim
+    helix
+    _1password-gui
+    ghostty
   ];
 
   environment.shells = with pkgs; [
