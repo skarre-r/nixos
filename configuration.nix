@@ -1,12 +1,14 @@
 {
   config,
-  lib,
   pkgs,
   ...
 }:
 
 {
-  imports = [ /etc/nixos/hardware-configuration.nix ];
+  imports = [
+    /etc/nixos/hardware-configuration.nix
+    (builtins.attrValues (builtins.readDir ./modules))
+  ];
 
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
@@ -32,8 +34,6 @@
   };
 
   services.xserver.enable = true;
-  services.displayManager.gdm.enable = true;
-  services.desktopManager.gnome.enable = true;
 
   services.xserver.xkb = {
     layout = "no";
@@ -69,9 +69,44 @@
     wget
     git
     just
+    fzf
+    curl
+    btop
+    bat
+    bash
+    atuin
+    docker
+    docker-buildx
+    docker-compose
+    eza
+    fd
+    fish
+    fastfetch
+    go
+    gopls
+    jujutsu
+    jq
+    k9s
+    kubectl
+    kubernetes-helm
+    kustomize
+    lazygit
+    lazyjj
+    lua
+    lua-language-server
+    luarocks
+    nushell
+    opentofu
+    podman
+    ripgrep
+    starship
+    tmux
+    uv
+    zsh
   ];
 
   fonts.packages = with pkgs; [
+    jetbrains-mono
     nerd-fonts.jetbrains-mono
   ];
 
