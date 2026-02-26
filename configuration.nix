@@ -116,6 +116,11 @@
       #functions = { };
       shellAbbrs = {
         gs = "git status -sb";
+	gl = "git --no-pager log --oneline -n 20";
+	lg = "lazygit";
+	add = "git add";
+	pull = "git pull";
+	push = "git push";
       };
       shellAliases = { };
     };
