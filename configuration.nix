@@ -32,12 +32,14 @@
     LC_TIME = "nb_NO.UTF-8";
   };
 
-  services.xserver.enable = true;
-
-  services.xserver.xkb = {
-    layout = "no";
-    variant = "nodeadkeys";
+  services.xserver = {
+    enable = true;
+    xkb = {
+      layout = "no";
+      variant = "nodeadkeys";
+    };
   };
+
   console.keyMap = "no";
 
   services.printing.enable = true;
