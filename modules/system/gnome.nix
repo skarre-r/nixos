@@ -8,28 +8,28 @@ let
     gnome-clocks
     gnome-console
     gnome-font-viewer
-    gnome-logs
     gnome-music
-    gnome-system-monitor
     gnome-weather
     gnome-connections # remote desktop
     baobab # disk usage analyzer
     decibels # audio player
     epiphany # web browser
-    loupe # image viewer
-    showtime # video player
     simple-scan # document scanner
     snapshot # camera
     yelp # help viewer
     gnome-tour
     gnome-user-docs
+    # gnome-system-monitor
     # gnome-text-editor
     # gnome-calculator
     # gnome-calendar
     # gnome-contacts
     # gnome-maps
+    # gnome-logs
     # nautilus # file manager
+    # showtime # video player
     # papers # document viewer
+    # loupe # image viewer
     nixos-render-docs
   ];
 
@@ -40,8 +40,10 @@ let
     blanket # ambient sounds
     dialect # translation
     iotas # note-taking app
-    # komikku # comic reader
+    eyedropper # color picker
+    komikku # comic reader
     dconf-editor
+    sysprof
   ];
 in
 
