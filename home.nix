@@ -12,14 +12,10 @@
 
   home.packages = with pkgs; [
     _1password-gui
-    helix
-    obsidian
     protonmail-desktop
-    vscodium
-    freetube
     sublime
-    ungoogled-chromium
-    neovim
-    librewolf
+    bruno
+    libreoffice
+    high-tide # 3rd party tidal client
   ];
 }
