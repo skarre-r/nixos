@@ -1,8 +1,13 @@
-{ ... }:
+{ pkgs, ... }:
 
 {
+  home.packages = with pkgs; [
+    git
+  ];
+
   programs.git = {
     enable = true;
+
     settings = {
       user = {
         name = "skarre-r";
@@ -10,5 +15,7 @@
       };
       init.defaultBranch = "main";
     };
+
+    package = pkgs.git;
   };
 }

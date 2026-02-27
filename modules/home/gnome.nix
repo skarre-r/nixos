@@ -34,4 +34,13 @@ in
       package = pkgs.whitesur-icon-theme;
     };
   };
+
+  # TODO: https://mynixos.com/home-manager/options/programs.gnome-shell
+  programs.gnome-shell = {
+    enable = true;
+  };
+
+  programs.gnome-terminal = {
+    enable = false;
+  };
 }
