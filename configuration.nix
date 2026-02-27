@@ -146,7 +146,6 @@
     btop
     bat
     bash
-    atuin
     docker
     docker-buildx
     docker-compose
