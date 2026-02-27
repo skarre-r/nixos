@@ -1,34 +1,26 @@
 { pkgs, ... }:
 
 {
+  imports = [
+    ./modules/home
+  ];
+
   home.stateVersion = "25.11";
 
   home.username = "skar";
   home.homeDirectory = "/home/skar";
 
   home.packages = with pkgs; [
-    # ghostty
-    cilium-cli
-    golangci-lint
-    # helix
-    # obsidian
+    ghostty
+    helix
+    obsidian
     protonmail-desktop
-    # _1password-gui
+    _1password-gui
     vscodium
-    jetbrains.goland
-    # freetube
+    freetube
     sublime
     ungoogled-chromium
+    neovim
+    librewolf
   ];
-
-  programs.git = {
-    enable = true;
-    settings = {
-      user = {
-        name = "skarre-r";
-        email = "59067313+skarre-r@users.noreply.github.com";
-      };
-      init.defaultBranch = "main";
-    };
-  };
 }

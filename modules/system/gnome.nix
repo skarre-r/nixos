@@ -22,12 +22,6 @@
     gnome-console
   ];
 
-  #programs.gnome-shell = {
-  #  enable = true;
-  #  extensions = [ ];
-  #  theme = null;
-  #};
-
   programs.dconf.profiles.user.databases = [
     {
       lockAll = false;
