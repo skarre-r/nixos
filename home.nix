@@ -11,11 +11,10 @@
   home.homeDirectory = "/home/skar";
 
   home.packages = with pkgs; [
-    ghostty
+    _1password-gui
     helix
     obsidian
     protonmail-desktop
-    _1password-gui
     vscodium
     freetube
     sublime
