@@ -153,8 +153,8 @@
     fd
     fish
     fastfetch
-    go
-    gopls
+    go # TODO: (re)move?
+    gopls # TODO: (re)move?
     jujutsu
     jq
     k9s

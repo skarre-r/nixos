@@ -20,6 +20,8 @@
     gh
   ];
 
+  xdg = { };
+
   fonts.fontconfig = {
     enable = true;
     antialiasing = true;

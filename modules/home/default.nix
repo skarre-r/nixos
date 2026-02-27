@@ -1,3 +1,4 @@
+# TODO: merge module files w/o specific config into this file?
 {
   atuin = import ./atuin.nix;
   bash = import ./bash.nix;
