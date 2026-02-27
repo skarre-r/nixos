@@ -38,6 +38,7 @@
       layout = "no";
       variant = "nodeadkeys";
     };
+    excludePackages = [ pkgs.xterm ];
   };
 
   console.keyMap = "no";
@@ -131,6 +132,9 @@
   };
 
   nixpkgs.config.allowUnfree = true;
+
+  environment.homeBinInPath = true;
+  environment.localBinInPath = true;
 
   environment.systemPackages = with pkgs; [
     vim
