@@ -13,7 +13,7 @@
     enableZshIntegration = true;
 
     settings = {
-      font-famili = "JetBrains Mono";
+      font-family = "JetBrains Mono";
       font-size = 13;
       font-thicken = true;
 

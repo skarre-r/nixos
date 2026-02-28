@@ -8,9 +8,7 @@
   programs.vscode = {
     enable = true;
 
-    argvSettings = { };
     dataFolderName = null;
-    nameShort = null;
     profiles = { };
 
     package = pkgs.vscodium;

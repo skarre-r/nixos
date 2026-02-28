@@ -8,7 +8,7 @@
   programs.librewolf = {
     enable = true;
 
-    enableGnomeExtensions = true;
+    #enableGnomeExtensions = true;
 
     policies = { };
     profiles = { };

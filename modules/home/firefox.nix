@@ -9,7 +9,7 @@
   programs.firefox = {
     enable = true;
 
-    enableGnomeExtensions = true;
+    #enableGnomeExtensions = true;
 
     nativeMessagingHosts = [ ];
     policies = { };

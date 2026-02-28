@@ -12,7 +12,7 @@
 
     extraConfig = "";
     extraLuaConfig = "";
-    extraName = "";
+    #extraName = "";
     extraPackages = [ ];
 
     plugins = [ ];
@@ -21,10 +21,10 @@
     vimAlias = false;
     vimdiffAlias = false;
 
-    waylandSupport = true;
+    #waylandSupport = true;
 
     withNodeJs = false;
-    withPerl = false;
+    #withPerl = false;
     withPython3 = true;
     withRuby = true;
 
