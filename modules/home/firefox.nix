@@ -1,15 +1,9 @@
 { pkgs, ... }:
 
 {
-  home.packages = with pkgs; [
-    firefox
-  ];
-
   # TODO: arkenfox?
   programs.firefox = {
-    enable = true;
-
-    #enableGnomeExtensions = true;
+    enable = false;
 
     nativeMessagingHosts = [ ];
     policies = { };
