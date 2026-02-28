@@ -13,3 +13,6 @@ update:
 
 rebuild:
     sudo nixos-rebuild switch --impure --flake .
+
+collect:
+     nix-collect-garbage -d
