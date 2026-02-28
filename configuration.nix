@@ -72,9 +72,7 @@
       package = pkgs.bat;
     };
     firefox = {
-      enable = true;
-      package = pkgs.firefox;
-      preferences = { };
+      enable = false;
     };
     fish = {
       enable = true;
