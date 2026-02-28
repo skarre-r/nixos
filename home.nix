@@ -18,6 +18,7 @@
     libreoffice
     high-tide # 3rd party tidal client
     gh
+    plex-desktop
   ];
 
   xdg = { };
@@ -29,39 +30,39 @@
     subpixelRendering = "rgb"; # null | "none" | "rgb" | "bgr" | "vertical-rgb" | "vertical-bgr"
   };
 
-  editorConfig = {
-    enable = true;
-    settings = {
-      "*" = {
-        charset = "utf-8";
-        end_of_line = "lf";
-        trim_trailing_whitespace = true;
-        insert_final_newline = true;
-      };
-    };
-  };
+  # editorConfig = {
+  #   enable = true;
+  #   settings = {
+  #     "*" = {
+  #       charset = "utf-8";
+  #       end_of_line = "lf";
+  #       trim_trailing_whitespace = true;
+  #       insert_final_newline = true;
+  #     };
+  #   };
+  # };
 
   # TODO:
-  accounts = {
-    calendar.accounts."nextcloud" = {
-      name = "nextcloud";
-      primary = true;
-      remote = {
-        type = "caldav";
-        url = null;
-        username = null;
-        passwordCommand = "";
-      };
-    };
-    contacts.accounts."nextcloud" = {
-      name = "nextcloud";
-      remote = {
-        type = "carddav";
-        url = null;
-        username = null;
-        passwordCommand = null;
-      };
-    };
-  };
+  # accounts = {
+  #   calendar.accounts."nextcloud" = {
+  #     name = "nextcloud";
+  #     primary = true;
+  #     remote = {
+  #       type = "caldav";
+  #       url = null;
+  #       username = null;
+  #       passwordCommand = "";
+  #     };
+  #   };
+  #   contacts.accounts."nextcloud" = {
+  #     name = "nextcloud";
+  #     remote = {
+  #       type = "carddav";
+  #       url = null;
+  #       username = null;
+  #       passwordCommand = null;
+  #     };
+  #   };
+  # };
 
 }
