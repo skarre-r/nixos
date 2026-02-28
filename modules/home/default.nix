@@ -1,40 +1,43 @@
-# TODO: merge module files w/o specific config into this file?
+{ ... }:
+
 {
-  atuin = import ./atuin.nix;
-  bash = import ./bash.nix;
-  bat = import ./bat.nix;
-  btop = import ./btop.nix;
-  calibre = import ./calibre.nix;
-  chromium = import ./chromium.nix;
-  eza = import ./eza.nix;
-  fastfetch = import ./fastfetch.nix;
-  fd = import ./fd.nix;
-  firefox = import ./firefox.nix;
-  fish = import ./fish.nix;
-  freetube = import ./freetube.nix;
-  fzf = import ./fzf.nix;
-  ghostty = import ./ghostty.nix;
-  git = import ./git.nix;
-  gnome = import ./gnome.nix;
-  go = import ./go.nix;
-  helix = import ./helix.nix;
-  jujutsu = import ./jujutsu.nix;
-  k9s = import ./k9s.nix;
-  lazygit = import ./lazygit.nix;
-  librewolf = import ./librewolf.nix;
-  mpv = import ./mpv.nix;
-  neovim = import ./neovim.nix;
-  nushell = import ./nushell.nix;
-  obsidian = import ./obsidian.nix;
-  ripgrep = import ./ripgrep.nix;
-  starship = import ./starship.nix;
-  thunderbird = import ./thunderbird.nix;
-  uv = import ./uv.nix;
-  vim = import ./vim.nix;
-  vscode = import ./vscode.nix;
-  yazi = import ./yazi.nix;
-  yt-dlp = import ./yt-dlp.nix;
-  zellij = import ./zellij.nix;
-  zoxide = import ./zoxide.nix;
-  zsh = import ./zsh.nix;
+  imports = [
+    ./atuin.nix
+    ./bash.nix
+    ./bat.nix
+    ./btop.nix
+    #./calibre.nix
+    ./chromium.nix
+    ./eza.nix
+    ./fastfetch.nix
+    ./fd.nix
+    ./firefox.nix
+    ./fish.nix
+    ./freetube.nix
+    ./fzf.nix
+    ./ghostty.nix
+    ./git.nix
+    ./gnome.nix
+    ./go.nix
+    ./helix.nix
+    ./jujutsu.nix
+    ./k9s.nix
+    ./lazygit.nix
+    ./librewolf.nix
+    ./mpv.nix
+    #./neovim.nix
+    ./nushell.nix
+    ./obsidian.nix
+    ./ripgrep.nix
+    ./starship.nix
+    ./thunderbird.nix
+    ./uv.nix
+    ./vim.nix
+    ./vscode.nix
+    ./yazi.nix
+    ./yt-dlp.nix
+    ./zellij.nix
+    ./zoxide.nix
+    ./zsh.nix
+  ];
 }
