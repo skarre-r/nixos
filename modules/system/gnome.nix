@@ -56,8 +56,6 @@ in
   };
   services.desktopManager.gnome.enable = true;
 
-  services.flatpak.enable = true;
-
   services.gnome = {
     core-apps.enable = true;
     core-developer-tools.enable = false;
