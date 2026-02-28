@@ -8,6 +8,7 @@
       url = "github:nix-community/home-manager/release-25.11";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    nix-flatpak.url = "github:gmodena/nix-flatpak/?ref=latest";
   };
 
   outputs =
@@ -16,6 +17,7 @@
       nixpkgs,
       nixpkgs-unstable,
       home-manager,
+      nix-flatpak,
       ...
     }:
     {
@@ -34,6 +36,9 @@
                 })
               ];
             }
+
+            # flatpaks
+            nix-flatpak.nixosModules.nix-flatpak
 
             # config
             ./configuration.nix
