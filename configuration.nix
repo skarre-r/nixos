@@ -53,6 +53,7 @@
     alsa.support32Bit = true;
     pulse.enable = true;
   };
+  services.fprintd.enable = true;
 
   users.defaultUserShell = pkgs.zsh;
   users.users.skar = {
@@ -177,6 +178,7 @@
     golangci-lint
     nixd
     nil
+    fprintd
   ];
 
   environment.shells = with pkgs; [
