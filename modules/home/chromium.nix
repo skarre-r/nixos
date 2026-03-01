@@ -9,7 +9,7 @@
     enable = true;
     package = pkgs.ungoogled-chromium;
 
-    extensions = [ ];
+    extensions = [];
     commandLineArgs = [ ];
   };
 }

@@ -12,7 +12,7 @@ let
     gnome-weather
     gnome-connections # remote desktop
     baobab # disk usage analyzer
-    decibels # audio player
+    # decibels # audio player
     epiphany # web browser
     simple-scan # document scanner
     snapshot # camera

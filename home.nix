@@ -21,7 +21,9 @@
     plex-desktop
   ];
 
-  xdg = { };
+  xdg = {
+    enable = true;
+  };
 
   fonts.fontconfig = {
     enable = true;

@@ -9,7 +9,7 @@ let
   ];
 in
 {
-  home.packages = extensions;
+  home.packages = extensions ++ [ pkgs.whitesur-icon-theme ];
 
   dconf = {
     enable = true;
