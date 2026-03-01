@@ -1,9 +1,9 @@
-{ pkgs, ... }:
+{ ... }:
 
 {
-  home.packages = with pkgs; [
-    neovim
-  ];
+  # home.packages = with pkgs; [
+  #   neovim
+  # ];
 
   programs.neovim = {
     enable = true;
@@ -28,6 +28,6 @@
     withPython3 = true;
     withRuby = true;
 
-    package = pkgs.neovim;
+    #package = pkgs.neovim;
   };
 }
