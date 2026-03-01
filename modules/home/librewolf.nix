@@ -1,19 +1,22 @@
 { pkgs, ... }:
 
 {
-  home.packages = with pkgs; [
-    librewolf
-  ];
-
   programs.librewolf = {
     enable = true;
-
-    #enableGnomeExtensions = true;
 
     policies = { };
     profiles = { };
     settings = { };
 
-    package = pkgs.librewolf;
+    package = pkgs.librewolf.overrideAttrs(p: rec {
+      desktopItem = p.desktopItem.override(i: {
+        icon = "firefox";
+      });
+    });
   };
+
+  # xdg.desktopEntries.librewolf = {
+  #   name = "LibreWolf";
+  #   icon = "firefox";  
+  # };
 }
