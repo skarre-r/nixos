@@ -175,6 +175,8 @@
     python314
     cilium-cli
     golangci-lint
+    nixd
+    nil
   ];
 
   environment.shells = with pkgs; [
