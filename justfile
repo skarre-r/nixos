@@ -6,7 +6,7 @@ alias help := default
 
 install:
     #!/usr/bin/env bash
-    NIX_EXPERIMENTAL_FEATURES="nix-command flakes" sudo nixos-rebuild switch --impure --flake .
+    NIX_EXPERIMENTAL_FEATURES="nix-command flakes" sudo nixos-rebuild switch --impure --flake .#thinkpad
 
 update:
     nix flake update
@@ -14,5 +14,11 @@ update:
 rebuild:
     sudo nixos-rebuild switch --impure --flake .
 
-collect:
-     nix-collect-garbage -d
+clean:
+    nix-collect-garbage -d
+
+optimize:
+    nix-store --optimise
+
+archive:
+    nix flake archive
