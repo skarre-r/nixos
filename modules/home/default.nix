@@ -11,13 +11,13 @@
     ./eza.nix
     ./fastfetch.nix
     ./fd.nix
-    ./firefox.nix
+    # ./firefox.nix
     ./fish.nix
     ./freetube.nix
     ./fzf.nix
     ./ghostty.nix
-    ./git.nix
-    ./gnome.nix
+    # ./git.nix
+    # ./gnome.nix
     ./go.nix
     ./helix.nix
     ./jujutsu.nix
@@ -25,12 +25,12 @@
     ./lazygit.nix
     ./librewolf.nix
     ./mpv.nix
-    #./neovim.nix
+    ./neovim.nix
     ./nushell.nix
     ./obsidian.nix
     ./ripgrep.nix
     ./starship.nix
-    ./thunderbird.nix
+    # ./thunderbird.nix
     ./uv.nix
     ./vim.nix
     ./vscode.nix
