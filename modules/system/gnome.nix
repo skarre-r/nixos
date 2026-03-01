@@ -39,7 +39,7 @@ let
     errands # reminders app
     # blanket # ambient sounds
     dialect # translation
-    iotas # note-taking app
+    # iotas # note-taking app
     eyedropper # color picker
     # komikku # comic reader
     dconf-editor
