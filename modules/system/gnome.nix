@@ -37,7 +37,6 @@ let
     fragments # torrent client
     errands # reminders app
     dconf-editor
-    sysprof
     gnome-tweaks
   ];
 in
