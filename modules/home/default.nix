@@ -2,42 +2,9 @@
 
 {
   imports = [
-    ./atuin.nix
-    ./bash.nix
-    ./bat.nix
-    ./btop.nix
-    #./calibre.nix
-    ./chromium.nix
-    ./eza.nix
-    ./fastfetch.nix
-    ./fd.nix
-    # ./firefox.nix
-    ./fish.nix
-    ./freetube.nix
-    ./fzf.nix
     ./ghostty.nix
-    # ./git.nix
-    # ./gnome.nix
-    ./go.nix
-    ./helix.nix
-    ./jujutsu.nix
-    ./k9s.nix
-    ./lazygit.nix
+    ./git.nix
+    ./gnome.nix
     ./librewolf.nix
-    ./mpv.nix
-    ./neovim.nix
-    ./nushell.nix
-    ./obsidian.nix
-    ./ripgrep.nix
-    ./starship.nix
-    # ./thunderbird.nix
-    ./uv.nix
-    ./vim.nix
-    ./vscode.nix
-    ./yazi.nix
-    ./yt-dlp.nix
-    ./zellij.nix
-    ./zoxide.nix
-    ./zsh.nix
   ];
 }

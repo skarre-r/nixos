@@ -30,18 +30,12 @@ let
     # showtime # video player
     # papers # document viewer
     # loupe # image viewer
-    nixos-render-docs
   ];
 
   extraPackages = with pkgs; [
     newsflash # rss reader
     fragments # torrent client
     errands # reminders app
-    # blanket # ambient sounds
-    dialect # translation
-    # iotas # note-taking app
-    eyedropper # color picker
-    # komikku # comic reader
     dconf-editor
     sysprof
     gnome-tweaks

@@ -7,20 +7,7 @@ let
     libreoffice
     gh
     plex-desktop
-    zed-editor
-
-    # gnome extensions
-    gnomeExtensions.blur-my-shell
-    gnomeExtensions.just-perfection
-    gnomeExtensions.dash-to-dock
-    gnomeExtensions.user-themes
-    gnomeExtensions.tiling-shell
-
-    # themes
-    whitesur-gtk-theme
-    whitesur-icon-theme
   ];
-
 in
 {
   imports = [
@@ -32,33 +19,84 @@ in
   home.homeDirectory = "/home/skar";
   home.packages = packages;
 
-  programs.git = {
+  programs.atuin = {
     enable = true;
-    settings = {
-      init.defaultBranch = "main";
-      user = {
-        name = "skarre-r";
-        email = "59067313+skarre-r@users.noreply.github.com";
-      };
-    };
+    enableFishIntegration = true;
   };
-  programs.gnome-shell.enable = true;
-  programs.gnome-terminal.enable = false;
-
-  gtk = {
+  programs.bash.enable = true;
+  programs.bat.enable = true;
+  programs.btop.enable = true;
+  programs.calibre.enable = true;
+  programs.chromium = {
     enable = true;
-    iconTheme = {
-      name = "WhiteSur";
-      package = pkgs.whitesur-icon-theme;
-    };
+    package = pkgs.ungoogled-chromium;
   };
-
-  dconf = {
+  programs.eza = {
     enable = true;
-    settings = {
-      "org/gnome/desktop/calendar".show-weekdate = true;
-    };
+    enableFishIntegration = true;
   };
+  programs.fastfetch.enable = true;
+  programs.fd.enable = true;
+  programs.firefox.enable = false;
+  programs.fish = {
+    enable = true; # TODO
+    preferAbbrs = true;
+  };
+  programs.freetube.enable = true;
+  programs.fzf = {
+    enable = true;
+    enableFishIntegration = true;
+  };
+  programs.gh.enable = true;
+  programs.go = {
+    enable = true;
+    telemetry.mode = "off";
+  };
+  programs.grep.enable = true;
+  programs.helix.enable = true;
+  programs.jq.enable = true;
+  programs.jujutsu.enable = true;
+  programs.k9s.enable = true;
+  programs.lazygit = {
+    enable = true;
+    enableFishIntegration = true;
+  };
+  programs.man.enable = true;
+  programs.mpv.enable = true;
+  programs.neovim.enable = true;
+  programs.nushell.enable = true;
+  programs.obsidian.enable = true;
+  programs.ripgrep.enable = true;
+  programs.ssh.enable = true;
+  programs.starship = {
+    enable = true;
+    enableFishIntegration = true;
+  };
+  programs.tmux.enable = true;
+  programs.uv.enable = true;
+  programs.vim = {
+    enable = true;
+    defaultEditor = true;
+  };
+  programs.vscode = {
+    enable = true;
+    package = pkgs.vscodium;
+  };
+  programs.yazi = {
+    enable = true;
+    enableFishIntegration = true;
+  };
+  programs.yt-dlp.enable = true;
+  programs.zed-editor.enable = true;
+  programs.zellij = {
+    enable = true;
+    enableFishIntegration = true;
+  };
+  programs.zoxide = {
+    enable = true;
+    enableFishIntegration = true;
+  };
+  programs.zsh.enable = true;
 
   xdg.enable = true;
 

@@ -2,140 +2,8 @@
   pkgs,
   ...
 }:
-
-{
-  imports = [
-    /etc/nixos/hardware-configuration.nix
-    ./modules/system
-  ];
-
-  boot.loader.systemd-boot.enable = true;
-  boot.loader.efi.canTouchEfiVariables = true;
-
-  boot.kernelPackages = pkgs.linuxPackages_latest;
-
-  networking.hostName = "thinkpad";
-  networking.networkmanager.enable = true;
-
-  time.timeZone = "Europe/Oslo";
-
-  i18n.defaultLocale = "en_US.UTF-8";
-  i18n.extraLocaleSettings = {
-    LC_ADDRESS = "nb_NO.UTF-8";
-    LC_IDENTIFICATION = "nb_NO.UTF-8";
-    LC_MEASUREMENT = "nb_NO.UTF-8";
-    LC_MONETARY = "nb_NO.UTF-8";
-    LC_NAME = "nb_NO.UTF-8";
-    LC_NUMERIC = "nb_NO.UTF-8";
-    LC_PAPER = "nb_NO.UTF-8";
-    LC_TELEPHONE = "nb_NO.UTF-8";
-    LC_TIME = "nb_NO.UTF-8";
-  };
-
-  services.xserver = {
-    enable = true;
-    xkb = {
-      layout = "no";
-      variant = "nodeadkeys";
-    };
-    excludePackages = [ pkgs.xterm ];
-  };
-
-  console.keyMap = "no";
-
-  services.printing.enable = true;
-
-  services.pulseaudio.enable = false;
-  security.rtkit.enable = true;
-  services.pipewire = {
-    enable = true;
-    alsa.enable = true;
-    alsa.support32Bit = true;
-    pulse.enable = true;
-  };
-  services.fprintd.enable = true;
-
-  users.defaultUserShell = pkgs.zsh;
-  users.users.skar = {
-    isNormalUser = true;
-    extraGroups = [
-      "wheel"
-      "networkmanager"
-    ];
-    shell = pkgs.fish;
-    useDefaultShell = false;
-  };
-
-  # TODO: use home-manager instead?
-  programs = {
-    bat = {
-      enable = true;
-      package = pkgs.bat;
-    };
-    firefox = {
-      enable = false;
-    };
-    fish = {
-      enable = true;
-      package = pkgs.fish;
-      shellAbbrs = {
-        gs = "git status -sb";
-        gl = "git --no-pager log --oneline -n 20";
-        lg = "lazygit";
-        add = "git add";
-        pull = "git pull";
-        push = "git push";
-      };
-    };
-    git = {
-      enable = true;
-      package = pkgs.git;
-    };
-    lazygit = {
-      enable = true;
-      package = pkgs.lazygit;
-      settings = { };
-    };
-    nano = {
-      enable = true;
-      package = pkgs.nano;
-      syntaxHighlight = true;
-    };
-    starship = {
-      enable = true;
-      package = pkgs.starship;
-    };
-    tmux = {
-      enable = true;
-      package = pkgs.tmux;
-    };
-    vim = {
-      enable = true;
-      package = pkgs.vim;
-      defaultEditor = true;
-    };
-    yazi = {
-      enable = true;
-      package = pkgs.yazi;
-    };
-    zoxide = {
-      enable = true;
-      enableBashIntegration = true;
-      enableFishIntegration = true;
-      enableZshIntegration = true;
-      package = pkgs.zoxide;
-    };
-    zsh = {
-      enable = true;
-    };
-  };
-
-  nixpkgs.config.allowUnfree = true;
-
-  environment.homeBinInPath = true;
-  environment.localBinInPath = true;
-
-  environment.systemPackages = with pkgs; [
+let
+  packages = with pkgs; [
     vim
     wget
     git
@@ -178,9 +46,98 @@
     golangci-lint
     nixd
     nil
-    fprintd
+    fprintd # TODO
+  ];
+in
+{
+  imports = [
+    /etc/nixos/hardware-configuration.nix
+    ./modules/system
   ];
 
+  boot.loader.systemd-boot.enable = true;
+  boot.loader.efi.canTouchEfiVariables = true;
+  boot.kernelPackages = pkgs.linuxPackages_latest;
+
+  networking.hostName = "thinkpad";
+  networking.networkmanager.enable = true;
+
+  time.timeZone = "Europe/Oslo";
+
+  i18n.defaultLocale = "en_US.UTF-8";
+  i18n.extraLocaleSettings = {
+    LC_ADDRESS = "nb_NO.UTF-8";
+    LC_IDENTIFICATION = "nb_NO.UTF-8";
+    LC_MEASUREMENT = "nb_NO.UTF-8";
+    LC_MONETARY = "nb_NO.UTF-8";
+    LC_NAME = "nb_NO.UTF-8";
+    LC_NUMERIC = "nb_NO.UTF-8";
+    LC_PAPER = "nb_NO.UTF-8";
+    LC_TELEPHONE = "nb_NO.UTF-8";
+    LC_TIME = "nb_NO.UTF-8";
+  };
+
+  console.keyMap = "no";
+
+  security.rtkit.enable = true;
+
+  services.xserver = {
+    enable = true;
+    xkb = {
+      layout = "no";
+      variant = "nodeadkeys";
+    };
+    excludePackages = [ pkgs.xterm ];
+  };
+  services.printing.enable = true;
+  services.pulseaudio.enable = false;
+  services.pipewire = {
+    enable = true;
+    alsa.enable = true;
+    alsa.support32Bit = true;
+    pulse.enable = true;
+  };
+  services.fprintd.enable = true; # TODO
+
+  users.defaultUserShell = pkgs.zsh;
+  users.users.skar = {
+    isNormalUser = true;
+    extraGroups = [
+      "wheel"
+      "networkmanager"
+    ];
+    shell = pkgs.fish;
+    useDefaultShell = false;
+  };
+
+  programs.bat.enable = true;
+  programs.firefox.enable = false;
+  programs.fish = {
+    enable = true;
+    shellAbbrs = {
+      gs = "git status -sb";
+      gl = "git --no-pager log --oneline -n 20";
+      lg = "lazygit";
+      add = "git add";
+      pull = "git pull";
+      push = "git push";
+    };
+  };
+  programs.git.enable = true;
+  programs.lazygit.enable = true;
+  programs.nano.enable = true;
+  programs.starship.enable = true;
+  programs.tmux.enable = true;
+  programs.vim = {
+    enable = true;
+    defaultEditor = true;
+  };
+  programs.zoxide.enable = true;
+  programs.zsh.enable = true;
+
+  environment.homeBinInPath = true;
+  environment.localBinInPath = true;
+  environment.systemPackages = packages;
   environment.shells = with pkgs; [
     bash
     fish
@@ -192,6 +149,8 @@
     jetbrains-mono
     nerd-fonts.jetbrains-mono
   ];
+
+  nixpkgs.config.allowUnfree = true;
 
   nix.settings.experimental-features = [
     "nix-command"
