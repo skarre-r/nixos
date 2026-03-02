@@ -9,7 +9,7 @@ install:
     NIX_EXPERIMENTAL_FEATURES="nix-command flakes" sudo nixos-rebuild switch --impure --flake .#thinkpad
 
 update:
-    nix flake update
+    sudo nix flake update
 
 rebuild:
     sudo nixos-rebuild switch --impure --flake .
