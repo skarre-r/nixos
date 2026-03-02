@@ -33,9 +33,12 @@ let
     uv
     python314
     cilium-cli
-    nixd
     nil
+    nixd
+    nixfmt-rfc-style
     fprintd # TODO
+    alejandra
+    tree-sitter
   ];
 in
 {
@@ -69,6 +72,7 @@ in
   console.keyMap = "no";
 
   security.rtkit.enable = true;
+  security.sudo.enable = true;
 
   services.xserver = {
     enable = true;
@@ -86,7 +90,19 @@ in
     alsa.support32Bit = true;
     pulse.enable = true;
   };
-  services.fprintd.enable = true; # TODO
+  services.fprintd = {
+    enable = true;
+    package = pkgs.fprintd-tod;
+    tod = {
+      enable = true;
+      driver = pkgs.libfprint-2-tod1-goodix-550a; # TODO: or "libfprint-2-tod1-goodix"
+    };
+  };
+  services.thinkfan.enable = false; # TODO
+  services.home-manager = {
+    autoExpire.enable = false; # TODO
+    autoUpgrade.enable = false; # TODO
+  };
 
   users.defaultUserShell = pkgs.zsh;
   users.users.skar = {
@@ -128,12 +144,21 @@ in
     nerd-fonts.jetbrains-mono
   ];
 
+  nix.enable = true;
+  nix.gc.automatic = true;
+  nix.optimise.automatic = true;
+  nix.settings = {
+    auto-optimise-store = true;
+    experimental-features = [
+      "nix-command"
+      "flakes"
+    ];
+  };
+
   nixpkgs.config.allowUnfree = true;
 
-  nix.settings.experimental-features = [
-    "nix-command"
-    "flakes"
-  ];
-
   system.stateVersion = "25.11";
+  system.autoUpgrade.enable = false; # TODO?
+
+  powerManagement.enable = true;
 }
