@@ -55,6 +55,11 @@ in
     core-developer-tools.enable = false;
     games.enable = false;
     gnome-online-accounts.enable = true;
+    gnome-software.enable = true;
+    gnome-settings-daemon.enable = true;
+    gnome-remote-desktop.enable = false;
+    gnome-initial-setup.enable = false;
+    sushi.enable = true;
   };
 
   environment.gnome.excludePackages = excludePackages;
