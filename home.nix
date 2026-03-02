@@ -7,6 +7,9 @@ let
     libreoffice
     gh
     plex-desktop
+    signal-desktop
+    telegram-desktop
+    slack
   ];
 in
 {
