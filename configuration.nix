@@ -4,46 +4,35 @@
 }:
 let
   packages = with pkgs; [
-    vim
     wget
-    git
     just
     fzf
     curl
     btop
-    bat
-    bash
     docker
     docker-buildx
     docker-compose
     eza
     fd
-    fish
     fastfetch
     go # TODO: (re)move?
     gopls # TODO: (re)move?
+    golangci-lint
     jujutsu
     jq
     k9s
     kubectl
     kubernetes-helm
     kustomize
-    lazygit
-    lazyjj
     lua
     lua-language-server
     luarocks
-    nushell
     opentofu
     podman
     ripgrep
-    starship
-    tmux
     uv
-    zsh
     python314
     cilium-cli
-    golangci-lint
     nixd
     nil
     fprintd # TODO
@@ -112,17 +101,6 @@ in
 
   programs.bat.enable = true;
   programs.firefox.enable = false;
-  programs.fish = {
-    enable = true;
-    shellAbbrs = {
-      gs = "git status -sb";
-      gl = "git --no-pager log --oneline -n 20";
-      lg = "lazygit";
-      add = "git add";
-      pull = "git pull";
-      push = "git push";
-    };
-  };
   programs.git.enable = true;
   programs.lazygit.enable = true;
   programs.nano.enable = true;
