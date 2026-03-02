@@ -99,10 +99,10 @@ in
     };
   };
   services.thinkfan.enable = false; # TODO
-  services.home-manager = {
-    autoExpire.enable = false; # TODO
-    autoUpgrade.enable = false; # TODO
-  };
+  # services.home-manager = {
+  #   autoExpire.enable = false; # TODO
+  #   autoUpgrade.enable = false; # TODO
+  # };
 
   users.defaultUserShell = pkgs.zsh;
   users.users.skar = {

@@ -29,7 +29,7 @@ in
   programs.bash.enable = true;
   programs.bat.enable = true;
   programs.btop.enable = true;
-  programs.calibre.enable = true;
+  # programs.calibre.enable = true;
   programs.chromium = {
     enable = true;
     package = pkgs.ungoogled-chromium;
@@ -70,7 +70,7 @@ in
   programs.nushell.enable = true;
   programs.obsidian.enable = true;
   programs.ripgrep.enable = true;
-  programs.ssh.enable = true;
+  # programs.ssh.enable = true;
   programs.starship = {
     enable = true;
     enableFishIntegration = true;
@@ -121,7 +121,7 @@ in
   programs.yt-dlp.enable = true;
   programs.zed-editor.enable = true;
   programs.zellij = {
-    enable = true;
+    enable = false;
     enableFishIntegration = true;
   };
   programs.zoxide = {
