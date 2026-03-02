@@ -77,6 +77,7 @@ in
   };
   programs.tmux.enable = true;
   programs.uv.enable = true;
+  # TODO: move config to configuration.nix
   programs.vim = {
     enable = true;
     defaultEditor = true;

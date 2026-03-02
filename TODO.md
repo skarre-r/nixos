@@ -1,4 +1,4 @@
-- [ ] fix fingerprint reader (fprintd)
+- [x] fix fingerprint reader (fprintd)
 - [ ] xdg settings
   - [ ] hide .desktop items
 - [ ] gnome/ dconf settings
