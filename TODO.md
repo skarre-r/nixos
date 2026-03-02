@@ -1,0 +1,23 @@
+- [ ] fix fingerprint reader (fprintd)
+- [ ] xdg settings
+  - [ ] hide .desktop items
+- [ ] gnome/ dconf settings
+  - [ ] keybindings
+- [ ] librewolf settings + extensions
+  - [ ] ublock origin extension
+  - [ ] dark reader extension
+  - [ ] 1password extension
+  - [ ] google search engine
+- [ ] zed config, extensions?
+- [ ] starship config
+- [ ] neovim config
+- [ ] obsidian config
+- [ ] global justfile (to rebuild)?
+- [ ] justfile recipe to commit new generations?
+
+---
+
+- [ ] magnet/ rectangle-like window management
+- [ ] rcmd-like window management
+  - [ ] rebind physical copilot key
+- [ ] macOS-like keybindings
