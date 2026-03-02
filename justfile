@@ -22,3 +22,6 @@ optimize:
 
 archive:
     nix flake archive
+
+fingerprint:
+    fprintd-enroll
