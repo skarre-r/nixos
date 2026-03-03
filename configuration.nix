@@ -95,14 +95,10 @@ in
     package = pkgs.fprintd-tod;
     tod = {
       enable = true;
-      driver = pkgs.libfprint-2-tod1-goodix-550a; # TODO: or "libfprint-2-tod1-goodix"
+      driver = pkgs.libfprint-2-tod1-goodix-550a;
     };
   };
   services.thinkfan.enable = false; # TODO
-  # services.home-manager = {
-  #   autoExpire.enable = false; # TODO
-  #   autoUpgrade.enable = false; # TODO
-  # };
 
   users.defaultUserShell = pkgs.zsh;
   users.users.skar = {
@@ -118,30 +114,9 @@ in
   programs.bat.enable = true;
   programs.firefox.enable = false;
   programs.git.enable = true;
-  programs.lazygit = {
-    enable = true;
-    settings = {
-      gui = {
-        mouseEvents = true;
-        language = "en";
-        showRandomTip = false;
-        nerdFontsVersion = "3";
-        showFileIcons = true;
-      };
-      git = {
-        autoFetch = false;
-      };
-      update = {
-        method = "never";
-      };
-      confirmOnQuit = false;
-      quitOnTopLevelReturn = true;
-      disableStartupPopups = true;
-      notARepository = "quit";
-    };
-  };
+  programs.lazygit.enable = false;
   programs.nano.enable = true;
-  programs.starship.enable = true;
+  programs.starship.enable = false;
   programs.tmux.enable = true;
   programs.vim = {
     enable = true;
