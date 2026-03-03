@@ -6,7 +6,11 @@ let
     gnomeExtensions.just-perfection
     gnomeExtensions.dash-to-dock
     gnomeExtensions.user-themes
-    gnomeExtensions.tiling-shell
+    gnomeExtensions.tiling-shell # TODO: disable
+    gnomeExtensions.gtile
+    gnomeExtensions.kiwi-is-not-apple
+    gnomeExtensions.kiwi-menu
+    gnomeExtensions.appindicator
 
     # themes
     whitesur-gtk-theme
@@ -16,6 +20,7 @@ in
 {
   home.packages = packages;
 
+  # TODO: configure gtile
   dconf = {
     enable = true;
     settings = {
