@@ -1,15 +1,7 @@
 { pkgs, ... }:
-let
-  packageNames = [
-    # "net.waterfox.waterfox"
-  ];
-in
 
 {
-  services.flatpak = {
-    enable = true;
-    packages = packageNames;
-  };
+  services.flatpak.enable = true;
 
   systemd.services.flatpak-repo = {
     wantedBy = [ "multi-user.target" ];
