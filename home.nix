@@ -100,7 +100,6 @@ in
   programs.man.enable = true;
   programs.mpv.enable = true;
   programs.nushell.enable = true;
-  programs.obsidian.enable = true;
   programs.ripgrep.enable = true;
   # programs.ssh.enable = true;
   programs.tmux.enable = true;
