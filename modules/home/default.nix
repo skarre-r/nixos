@@ -6,6 +6,7 @@
     ./git.nix
     ./gnome.nix
     ./librewolf.nix
+    ./starship.nix
     ./zed.nix
   ];
 }
