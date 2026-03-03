@@ -44,7 +44,6 @@ in
   programs.bash.enable = true;
   programs.bat.enable = true;
   programs.btop.enable = true;
-  # programs.calibre.enable = true;
   programs.chromium = {
     enable = true;
     package = pkgs.ungoogled-chromium;
@@ -100,7 +99,6 @@ in
   };
   programs.man.enable = true;
   programs.mpv.enable = true;
-  programs.neovim.enable = true;
   programs.nushell.enable = true;
   programs.obsidian.enable = true;
   programs.ripgrep.enable = true;
