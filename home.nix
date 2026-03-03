@@ -25,6 +25,21 @@ in
   programs.atuin = {
     enable = true;
     enableFishIntegration = true;
+    settings = {
+      auto_sync = false;
+      search_mode = "fuzzy";
+      filter_mode = "global";
+      style = "auto";
+      inline_height = 10;
+      invert = false;
+      show_preview = true;
+      exit_mode = "return-query";
+      show_help = false;
+      show_tabs = false;
+      enter_accept = false;
+      keymap_mode = "auto";
+      prefers_reduced_motion = true;
+    };
   };
   programs.bash.enable = true;
   programs.bat.enable = true;
@@ -36,7 +51,7 @@ in
   };
   programs.eza = {
     enable = true;
-    enableFishIntegration = true;
+    enableFishIntegration = false; # TODO
   };
   programs.fastfetch.enable = true;
   programs.fd.enable = true;
@@ -63,6 +78,25 @@ in
   programs.lazygit = {
     enable = true;
     enableFishIntegration = true;
+    settings = {
+      gui = {
+        mouseEvents = true;
+        language = "en";
+        showRandomTip = false;
+        nerdFontsVersion = "3";
+        showFileIcons = true;
+      };
+      git = {
+        autoFetch = false;
+      };
+      update = {
+        method = "never";
+      };
+      confirmOnQuit = false;
+      quitOnTopLevelReturn = true;
+      disableStartupPopups = true;
+      notARepository = "quit";
+    };
   };
   programs.man.enable = true;
   programs.mpv.enable = true;
@@ -71,13 +105,9 @@ in
   programs.obsidian.enable = true;
   programs.ripgrep.enable = true;
   # programs.ssh.enable = true;
-  programs.starship = {
-    enable = true;
-    enableFishIntegration = true;
-  };
   programs.tmux.enable = true;
   programs.uv.enable = true;
-  # TODO: move config to configuration.nix
+  # TODO: move config to configuration.nix?
   programs.vim = {
     enable = true;
     defaultEditor = true;
@@ -120,9 +150,8 @@ in
     enableFishIntegration = true;
   };
   programs.yt-dlp.enable = true;
-  programs.zed-editor.enable = true;
   programs.zellij = {
-    enable = false;
+    enable = false; # TODO
     enableFishIntegration = true;
   };
   programs.zoxide = {
