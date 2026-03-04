@@ -39,6 +39,7 @@ let
     fprintd # TODO
     alejandra
     tree-sitter
+    nh
   ];
 in
 {

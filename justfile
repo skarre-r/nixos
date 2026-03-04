@@ -11,6 +11,8 @@ install:
 update:
     sudo nix flake update
 
+# TODO: replace commands with `nh`
+
 rebuild:
     sudo nixos-rebuild switch --impure --flake .
 
