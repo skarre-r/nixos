@@ -6,6 +6,7 @@
 
 - [ ] gnome
   - [ ] dconf settings
+    - [ ] dconf2nix
   - [ ] (macOS-like) keybindings
     - [ ] left alt + X
     - [ ] disable maximize window (super + up)
@@ -35,9 +36,14 @@
   - [ ] global justfile w/ home.file? (to rebuild, etc)
   - [ ] recipe to commit new generations?
 
+- [ ] awesome nix
+  - [x] nh
+  - [ ] nix-index
+  - [ ] stylix?
+  - [ ] nix-software-center?
+  - [ ] nixos-conf-editor?
+
 - [x] starship config
 - [ ] neovim (nvf) config (WIP)
 - [ ] obsidian config (WIP)
-- [ ] stylix?
-- [ ] awesome nix
 - [ ] ssh config?
