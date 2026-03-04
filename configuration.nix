@@ -39,7 +39,6 @@ let
     fprintd # TODO
     alejandra
     tree-sitter
-    nh
   ];
 in
 {
@@ -125,6 +124,15 @@ in
   };
   programs.zoxide.enable = true;
   programs.zsh.enable = true;
+  programs.nh = {
+    enable = true;
+    clean = {
+      enable = true;
+      dates = "weekly";
+      extraArgs = "--keep 3 --keep-since 3d";
+    };
+    flake = null; # TODO: repo path
+  };
 
   environment.homeBinInPath = true;
   environment.localBinInPath = true;
