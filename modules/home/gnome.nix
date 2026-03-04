@@ -15,6 +15,9 @@ let
     # themes
     whitesur-gtk-theme
     whitesur-icon-theme
+
+    # misc
+    dconf2nix
   ];
 in
 {
