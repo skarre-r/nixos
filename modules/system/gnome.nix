@@ -36,6 +36,9 @@ let
     newsflash # rss reader
     fragments # torrent client
     errands # reminders app
+    apostrophe # markdown editor
+    deja-dup # backup tool
+    resources # resource monitor
     dconf-editor
     gnome-tweaks
   ];
