@@ -6,10 +6,8 @@ let
     gnomeExtensions.just-perfection
     gnomeExtensions.dash-to-dock
     gnomeExtensions.user-themes
-    gnomeExtensions.tiling-shell # TODO: disable
     gnomeExtensions.gtile
     gnomeExtensions.kiwi-is-not-apple
-    gnomeExtensions.kiwi-menu
     gnomeExtensions.appindicator
 
     # themes
