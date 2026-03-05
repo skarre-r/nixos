@@ -150,7 +150,7 @@ in
   ];
 
   nix.enable = true;
-  nix.gc.automatic = true;
+  nix.gc.automatic = false;
   nix.optimise.automatic = true;
   nix.settings = {
     auto-optimise-store = true;
@@ -158,6 +158,7 @@ in
       "nix-command"
       "flakes"
     ];
+    download-buffer-size = 524288000; # 500 MiB
   };
 
   nixpkgs.config.allowUnfree = true;
