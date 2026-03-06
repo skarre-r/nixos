@@ -11,13 +11,14 @@ install:
 update:
     sudo nix flake update
 
-# TODO: replace commands with `nh`
-
 rebuild:
     sudo nixos-rebuild switch --impure --flake .
 
+switch:
+    nh os switch --impure .
+
 clean:
-    nix-collect-garbage -d
+    sudo nh clean all --optimise --keep 3 --keep-since 24h
 
 optimize:
     nix-store --optimise
