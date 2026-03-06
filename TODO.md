@@ -15,11 +15,16 @@
       - [ ] super + q = quit
       - [ ] super + w = close window
       - [ ] super + t = new tab
+    - [ ] keyd vs gnome-tweaks
+    - [ ] https://github.com/canadaduane/my-nixos-conf/blob/main/system/keyd/keyd.conf
   - [ ] magnet/ rectangle-like window management
     - [ ] gTile extension
   - [ ] rcmd-like window management
     - [ ] rebind physical copilot key
-    - [ ] ~~wmctrl?~~ https://extensions.gnome.org/extension/1336/run-or-raise/
+      - [ ] keyd: https://github.com/rvaiya/keyd
+    - [ ] run-or-raise
+      - [ ] https://extensions.gnome.org/extension/1336/run-or-raise
+      - [ ] https://github.com/CZ-NIC/run-or-raise
   - [ ] configure workspaces (flashspace)
 
 - [ ] zed
