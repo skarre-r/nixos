@@ -10,6 +10,8 @@ let
     signal-desktop
     telegram-desktop
     slack
+    keymapp
+    kontroll
   ];
 in
 {
