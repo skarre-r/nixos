@@ -26,7 +26,12 @@ in
   dconf = {
     enable = true;
     settings = {
-      "org/gnome/desktop/calendar".show-weekdate = true;
+      "org/gnome/desktop/calendar" = {
+        show-weekdate = true;
+      };
+      "org/gnome/mutter" = {
+        overlay-key = "";
+      };
     };
   };
 
