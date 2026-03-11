@@ -39,6 +39,7 @@ let
     fprintd # TODO
     alejandra
     tree-sitter
+    brightnessctl
   ];
 in
 {
@@ -126,6 +127,7 @@ in
     extraGroups = [
       "wheel"
       "networkmanager"
+      "video"
     ];
     shell = pkgs.fish;
     useDefaultShell = false;
