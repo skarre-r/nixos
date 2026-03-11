@@ -102,7 +102,7 @@ in
   };
   services.thinkfan.enable = false; # TODO
   services.tlp = {
-    enable = true; # TODO: + tlpui
+    enable = false; # TODO: + tlpui
     settings = {
       START_CHARGE_THRESH_BAT0 = 40;
       STOP_CHARGE_THRESH_BAT0 = 80;
