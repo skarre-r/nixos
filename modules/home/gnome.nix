@@ -46,5 +46,9 @@ in
     <Shift><Ctrl><Super><Alt>g,ghostty,,
     <Shift><Ctrl><Super><Alt>f,nautilus,Org.gnome.Nautilus,
     <Shift><Ctrl><Super><Alt>z,zed,,
+    <Shift><Ctrl><Super><Alt>s,slack,,
+    <Shift><Ctrl><Super><Alt>p,plex,,
+    <Shift><Ctrl><Super><Alt>o,obsidian,,
+    <Shift><Ctrl><Super><Alt>l,librewolf,,
   '';
 }
