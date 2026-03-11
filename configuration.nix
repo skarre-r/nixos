@@ -195,4 +195,9 @@ in
       enable = true;
     };
   };
+
+  documentation = {
+    enable = true;
+    nixos.enable = false;
+  };
 }
