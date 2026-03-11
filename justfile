@@ -30,3 +30,11 @@ fingerprint:
 
 reload:
     keyd reload
+
+dconf:
+    #!/usr/bin/env bash
+    # dconf dump / | dconf2nix
+    dconf dump
+
+hibernate:
+    sudo systemctl hibernate
