@@ -49,7 +49,7 @@ in
       "org/gnome/mutter" = {
         dynamic-workspaces = false;
         edge-tiling = true;
-        overlay-key = "";
+        # overlay-key = "";
       };
       "org/gnome/mutter/keybinding" = {
         toggle-tiled-left = ["<Super>Left"];
