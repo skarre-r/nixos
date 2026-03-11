@@ -28,3 +28,6 @@ archive:
 
 fingerprint:
     fprintd-enroll
+
+reload:
+    keyd reload
