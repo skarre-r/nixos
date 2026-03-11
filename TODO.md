@@ -20,10 +20,10 @@
   - [ ] magnet/ rectangle-like window management
     - [ ] gTile extension
   - [ ] rcmd-like window management
-    - [ ] rebind physical copilot key
-      - [ ] keyd: https://github.com/rvaiya/keyd
+    - [x] rebind physical copilot key
+      - [x] keyd: https://github.com/rvaiya/keyd
     - [ ] run-or-raise
-      - [ ] https://extensions.gnome.org/extension/1336/run-or-raise
+      - [x] https://extensions.gnome.org/extension/1336/run-or-raise
       - [ ] https://github.com/CZ-NIC/run-or-raise
   - [ ] configure workspaces (flashspace)
 
@@ -43,7 +43,7 @@
 
 - [ ] awesome nix
   - [x] nh
-  - [ ] nix-index
+  - [ ] ~~nix-index~~
   - [ ] stylix?
   - [ ] nix-software-center?
   - [ ] nixos-conf-editor?
