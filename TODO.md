@@ -52,3 +52,7 @@
 - [ ] neovim (nvf) config (WIP)
 - [ ] obsidian config (WIP)
 - [ ] ssh config?
+
+---
+
+brightnessctl -d "platform::micmute" s 0
