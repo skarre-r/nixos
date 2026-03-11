@@ -50,6 +50,7 @@ in
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
   boot.kernelPackages = pkgs.linuxPackages_latest;
+  boot.postBootCommands = ""; # TODO: brightnessctl?
 
   networking.hostName = "thinkpad";
   networking.networkmanager.enable = true;
@@ -199,5 +200,25 @@ in
   documentation = {
     enable = true;
     nixos.enable = false;
+  };
+
+  zramSwap = {
+    enable = false; # TODO
+  };
+
+  virtualisation = {
+    docker = {
+      enable = false;
+      autoPrune = {
+        enable = true;
+      };
+    };
+    podman = {
+      enable = true;
+      autoPrune = {
+        enable = true;
+      };
+      dockerCompat = false;
+    };
   };
 }
