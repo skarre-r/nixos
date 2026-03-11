@@ -12,10 +12,9 @@ update:
     sudo nix flake update
 
 rebuild:
-    sudo nixos-rebuild switch --impure --flake .
-
-switch:
     nh os switch --impure .
+
+switch: rebuild
 
 clean:
     sudo nh clean all --optimise --keep 3 --keep-since 24h
