@@ -99,6 +99,25 @@ in
     };
   };
   services.thinkfan.enable = false; # TODO
+  services.tlp = {
+    enable = true; # TODO: + tlpui
+    settings = {
+      START_CHARGE_THRESH_BAT0 = 40;
+      STOP_CHARGE_THRESH_BAT0 = 80;
+    };
+  };
+  services.auto-cpufreq = {
+    enable = false; # TODO
+    settings = { };
+  };
+  services.tuned = {
+    enable = false;
+  };
+  services.logind.settings.Login = {
+    HandleLidSwitch = "suspend";
+    HandleLidSwitchDocked = "ignore";
+    HandleLidSwitchExternalPower = "lock";
+  };
 
   users.defaultUserShell = pkgs.zsh;
   users.users.skar = {
@@ -166,5 +185,14 @@ in
   system.stateVersion = "25.11";
   system.autoUpgrade.enable = false; # TODO?
 
-  powerManagement.enable = true;
+  systemd.sleep.extraConfig = ''
+    HibernateDelaySec=10m
+  '';
+
+  powerManagement = {
+    enable = true;
+    powertop = {
+      enable = true;
+    };
+  };
 }
