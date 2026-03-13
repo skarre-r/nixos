@@ -56,3 +56,55 @@
 ---
 
 brightnessctl -d "platform::micmute" s 0
+
+---
+
+macOS window shortcuts:
+
+- <Ctrl><LeftAlt>Enter = fullscreen
+- <Ctrl><LeftAlt>Left = left 1/2
+- <Ctrl><LeftAlt>Right = right 1/2
+- <Ctrl><LeftAlt>Up = top 1/2
+- <Ctrl><LeftAlt>Down = bottom 1/2
+- <Ctrl><LeftAlt>C = center
+- <Ctrl><LeftAlt>J = bottom left 1/4
+- <Ctrl><LeftAlt>K = bottom right 1/4
+- <Ctrl><LeftAlt>U = top left 1/4
+- <Ctrl><LeftAlt>I = top right 1/4
+- <Ctrl><LeftAlt>D = left 1/3
+- <Ctrl><LeftAlt>F = center 1/3
+- <Ctrl><LeftAlt>G = right 1/3
+- <Ctrl><LeftAlt>V = center semi-fullscreen
+- <Ctrl><LeftAlt>M = center mobile sized
+- <Ctrl><LeftAlt>, = smaller center mobile sized
+
+(<Ctrl><LeftAlt> = <Ctrl><Fn>)
+
+macOS editor shortcuts:
+
+- <LeftShift><LeftAlt>Down = copy line down
+- <LeftShift>Up/Down = select lines
+- <LeftAlt>Left/Right = jump word
+- <LeftAlt>Up/Down = move line
+- <LeftAlt>Backspace/Delete = delete word
+- <LeftSuper>Left/Right = start/ end of line
+- <LeftSuper>Up/Down = start/ end of file
+- <LeftSuper>Backspace/Delete = delete line
+- <LeftShift><LeftSuper>Left/Right = select to start/ end of line
+- <LeftShift><LeftSuper>Up/Down = select to start/ end of file
+- <LeftSuper>. = show "suggestions"
+- <LeftSuper>S = save
+- <LeftSuper>Q = quit app
+- <LeftSuper>W = close tab
+- <LeftSuper>K > <LeftSuper>W = close all tabs
+- <LeftSuper>P = files
+- <LeftShift><LeftSuper>P = execute command
+- <LeftSuper>T = new tab
+- <LeftSuper>N = new window/ file/ ???
+
+misc macoOS shortcuts:
+
+- <RightAlt>8 = [
+- <RightAlt>9 = ]
+- <LeftShift><RightAlt>8 = {
+- <LeftShift><RightAlt>9 = }
