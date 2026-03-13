@@ -39,8 +39,8 @@ in
         text-scaling-factor = 1.0;
       };
       "org/gnome/desktop/wm/keybindings" = {
-        maximize = [];
-        minimize = [];
+        maximize = [ ];
+        minimize = [ ];
       };
       "org/gnome/desktop/wm/preferences" = {
         button-layout = "appmenu:minimize,maximize,close";
@@ -51,9 +51,9 @@ in
         edge-tiling = true;
         # overlay-key = "";
       };
-      "org/gnome/mutter/keybinding" = {
-        toggle-tiled-left = ["<Super>Left"];
-        toggle-tiled-right = ["<Super>Right"];
+      "org/gnome/mutter/keybindings" = {
+        toggle-tiled-left = [ "" ];
+        toggle-tiled-right = [ "" ];
       };
       "org/gnome/nautilus/preferences" = {
         date-time-format = "simple";
