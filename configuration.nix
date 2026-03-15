@@ -122,12 +122,14 @@ in
   };
 
   users.defaultUserShell = pkgs.zsh;
+  # users.groups.keyd = {};
   users.users.skar = {
     isNormalUser = true;
     extraGroups = [
       "wheel"
       "networkmanager"
       "video"
+      # "keyd"
     ];
     shell = pkgs.fish;
     useDefaultShell = false;
@@ -216,7 +218,7 @@ in
       };
     };
     podman = {
-      enable = true;
+      enable = false;
       autoPrune = {
         enable = true;
       };
