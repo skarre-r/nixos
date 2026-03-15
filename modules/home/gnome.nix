@@ -10,6 +10,7 @@ let
     gnomeExtensions.kiwi-is-not-apple
     gnomeExtensions.appindicator
     gnomeExtensions.run-or-raise
+    gnomeExtensions.power-off-options
 
     # themes
     whitesur-gtk-theme
@@ -61,16 +62,16 @@ in
         show-image-thumbnails = "always";
       };
       "org/gnome/shell" = {
-        enabled-extensions = [
-          "blur-my-shell@aunetx"
-          "just-perfection-desktop@just-perfection"
-          "dash-to-dock@micxgx.gmail.com"
-          "user-theme@gnome-shell-extensions.gcampax.github.com"
-          "gTile@vibou"
-          "kiwi@kemma"
-          "appindicatorsupport@rgcjonas.gmail.com"
-          "run-or-raise@edvard.cz"
-        ];
+        # enabled-extensions = [
+        #   "blur-my-shell@aunetx"
+        #   "just-perfection-desktop@just-perfection"
+        #   "dash-to-dock@micxgx.gmail.com"
+        #   "user-theme@gnome-shell-extensions.gcampax.github.com"
+        #   "gTile@vibou"
+        #   "kiwi@kemma"
+        #   "appindicatorsupport@rgcjonas.gmail.com"
+        #   "run-or-raise@edvard.cz"
+        # ];
       };
       "org/gnome/shell/extensions/dash-to-dock" = {
         show-mounts = false;
