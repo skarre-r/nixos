@@ -11,6 +11,7 @@ let
     gnomeExtensions.appindicator
     gnomeExtensions.run-or-raise
     gnomeExtensions.power-off-options
+    gnomeExtensions.xremap
 
     # themes
     whitesur-gtk-theme
@@ -18,6 +19,7 @@ let
 
     # misc
     dconf2nix
+    xremap
   ];
 in
 {
@@ -94,75 +96,75 @@ in
         insets-secondary-right = 8;
         insets-secondary-top = 8;
 
-        resize1="1x1 1:1 1:1, 32x20 2:2 31:19, 24x15 2:2 23:14, 16x10 2:2 15:9";
-        resize2="4x4 1:3 2:4, 2:2 3:3";
-        resize3="4x4 3:3 4:4, 2:2 3:3";
-        resize4="4x4 1:1 2:2, 2:2 3:3";
-        resize5="4x4 3:1 4:2, 2:2 3:3";
-        resize6="3x1 1:1 1:1";
-        resize7="3x1 2:1 2:1";
-        resize8="3x1 3:1 3:1";
-        resize9="4x1 1:1 2:1, 2:1 3:1";
-        resize10="4x1 3:1 4:1, 2:1 3:1";
-        resize11="";
-        resize12="";
-        resize13="";
-        resize14="";
-        resize15="";
-        resize16="";
-        resize17="";
-        resize18="";
-        resize19="";
-        resize20="";
-        resize21="";
-        resize22="";
-        resize23="";
-        resize24="";
-        resize25="";
-        resize26="";
-        resize27="";
-        resize28="";
-        resize29="";
-        resize30="";
+        resize1 = "1x1 1:1 1:1, 32x20 2:2 31:19, 24x15 2:2 23:14, 16x10 2:2 15:9";
+        resize2 = "4x4 1:3 2:4, 2:2 3:3";
+        resize3 = "4x4 3:3 4:4, 2:2 3:3";
+        resize4 = "4x4 1:1 2:2, 2:2 3:3";
+        resize5 = "4x4 3:1 4:2, 2:2 3:3";
+        resize6 = "3x1 1:1 1:1";
+        resize7 = "3x1 2:1 2:1";
+        resize8 = "3x1 3:1 3:1";
+        resize9 = "4x1 1:1 2:1, 2:1 3:1";
+        resize10 = "4x1 3:1 4:1, 2:1 3:1";
+        resize11 = "";
+        resize12 = "";
+        resize13 = "";
+        resize14 = "";
+        resize15 = "";
+        resize16 = "";
+        resize17 = "";
+        resize18 = "";
+        resize19 = "";
+        resize20 = "";
+        resize21 = "";
+        resize22 = "";
+        resize23 = "";
+        resize24 = "";
+        resize25 = "";
+        resize26 = "";
+        resize27 = "";
+        resize28 = "";
+        resize29 = "";
+        resize30 = "";
 
-        preset-resize-1=["<Alt><Super>Return"];
-        preset-resize-2=["<Alt><Super>j"];
-        preset-resize-3=["<Alt><Super>k"];
-        preset-resize-4=["<Alt><Super>u"];
-        preset-resize-5=["<Alt><Super>i"];
-        preset-resize-6=["<Alt><Super>d"];
-        preset-resize-7=["<Alt><Super>f"];
-        preset-resize-8=["<Alt><Super>g"];
-        preset-resize-9 = ["<Alt><Super>Left"];
-        preset-resize-10 = ["<Alt><Super>Right"]; # doesnt work
-        preset-resize-11 = [];
-        preset-resize-12 = [];
-        preset-resize-13 = [];
-        preset-resize-14 = [];
-        preset-resize-15 = [];
-        preset-resize-16 = [];
-        preset-resize-17 = [];
-        preset-resize-18 = [];
-        preset-resize-19 = [];
-        preset-resize-21 = [];
-        preset-resize-22 = [];
-        preset-resize-23 = [];
-        preset-resize-24 = [];
-        preset-resize-25 = [];
-        preset-resize-26 = [];
-        preset-resize-27 = [];
-        preset-resize-28 = [];
-        preset-resize-29 = [];
+        preset-resize-1 = [ "<Alt><Super>Return" ];
+        preset-resize-2 = [ "<Alt><Super>j" ];
+        preset-resize-3 = [ "<Alt><Super>k" ];
+        preset-resize-4 = [ "<Alt><Super>u" ];
+        preset-resize-5 = [ "<Alt><Super>i" ];
+        preset-resize-6 = [ "<Alt><Super>d" ];
+        preset-resize-7 = [ "<Alt><Super>f" ];
+        preset-resize-8 = [ "<Alt><Super>g" ];
+        preset-resize-9 = [ "<Alt><Super>Left" ];
+        preset-resize-10 = [ "<Alt><Super>Right" ]; # doesnt work
+        preset-resize-11 = [ ];
+        preset-resize-12 = [ ];
+        preset-resize-13 = [ ];
+        preset-resize-14 = [ ];
+        preset-resize-15 = [ ];
+        preset-resize-16 = [ ];
+        preset-resize-17 = [ ];
+        preset-resize-18 = [ ];
+        preset-resize-19 = [ ];
+        preset-resize-21 = [ ];
+        preset-resize-22 = [ ];
+        preset-resize-23 = [ ];
+        preset-resize-24 = [ ];
+        preset-resize-25 = [ ];
+        preset-resize-26 = [ ];
+        preset-resize-27 = [ ];
+        preset-resize-28 = [ ];
+        preset-resize-29 = [ ];
 
-        move-down = [];
-        move-left = [];
-        move-right = [];
-        move-up = [];
-        move-next-monitor = [];
-        contract-down = [];
-        contract-right = [];
-        expand-down = [];
-        expand-right = [];
+        move-down = [ ];
+        move-left = [ ];
+        move-right = [ ];
+        move-up = [ ];
+        move-next-monitor = [ ];
+        contract-down = [ ];
+        contract-right = [ ];
+        expand-down = [ ];
+        expand-right = [ ];
       };
       # "org/gnome/shell/extensions/just-perfection" = {};
       "org/gnome/shell/extensions/kiwi" = {
