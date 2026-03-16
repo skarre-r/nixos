@@ -29,12 +29,14 @@ fingerprint:
     fprintd-enroll
 
 reload:
-    keyd reload
+    sudo systemctl restart keyd
+    sleep 1
+    sudo systemctl status keyd
 
 dconf:
     #!/usr/bin/env bash
     # dconf dump / | dconf2nix
-    dconf dump
+    dconf dump /
 
 hibernate:
     sudo systemctl hibernate

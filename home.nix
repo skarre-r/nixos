@@ -85,7 +85,7 @@ in
         language = "en";
         showRandomTip = false;
         nerdFontsVersion = "3";
-        showFileIcons = true;
+        showFileIcons = false;
       };
       git = {
         autoFetch = false;

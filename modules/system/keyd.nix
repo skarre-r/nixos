@@ -1,20 +1,13 @@
 # https://wiki.nixos.org/wiki/Keyd
-{ ... }:
+{ pkgs, ... }:
 
 {
+  environment.systemPackages = with pkgs; [
+    keyd
+  ];
+
   services.keyd = {
     enable = true;
-    # keyboard = {
-    #   default = {
-    #     ids = [ "*" ];
-    #     settings = {
-    #       main = {
-    #         # copilot key
-    #         "leftshift+leftmeta+f23" = "";
-    #       };
-    #     };
-    #   };
-    # };
   };
 
   environment.etc."keyd/default.conf".source = ./keyd.conf;
