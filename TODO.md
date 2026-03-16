@@ -108,3 +108,9 @@ misc macoOS shortcuts:
 - <RightAlt>9 = ]
 - <LeftShift><RightAlt>8 = {
 - <LeftShift><RightAlt>9 = }
+
+---
+
+- [ ] https://github.com/jtroo/kanata
+- [ ] https://github.com/rvaiya/keyd
+- [ ] https://github.com/xremap/xremap
