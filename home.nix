@@ -15,6 +15,10 @@ let
     foliate
     readest
     calibre
+    bitwarden-desktop
+    bitwarden-cli
+    planify
+    refine
   ];
 in
 {
