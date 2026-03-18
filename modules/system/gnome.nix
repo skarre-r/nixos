@@ -39,8 +39,19 @@ let
     apostrophe # markdown editor
     deja-dup # backup tool
     resources # resource monitor
-    dconf-editor
+    blanket # ambient sounds
+    collision # verify file hashes
+    dialect # translation
+    eyedropper # color picker
+    impression # create bootable drives
+    keypunch # practice typing
+    komikku # comic reader
+    shortwave # radio player
+    valuta # currency converter
+    wike # wikipedia reader
+    gnome-podcasts # podcast player
     gnome-tweaks
+    dconf-editor
   ];
 in
 
