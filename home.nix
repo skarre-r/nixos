@@ -12,6 +12,9 @@ let
     slack
     keymapp
     kontroll
+    foliate
+    readest
+    calibre
   ];
 in
 {
