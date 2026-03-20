@@ -4,6 +4,11 @@
 }:
 let
   excludePackages = with pkgs; [
+    baobab # disk usage analyzer
+    # decibels # audio player
+    epiphany # web browser
+    gnome-tour
+    gnome-user-docs
     gnome-characters
     gnome-clocks
     gnome-console
@@ -11,14 +16,6 @@ let
     gnome-music
     gnome-weather
     gnome-connections # remote desktop
-    baobab # disk usage analyzer
-    # decibels # audio player
-    epiphany # web browser
-    simple-scan # document scanner
-    snapshot # camera
-    yelp # help viewer
-    gnome-tour
-    gnome-user-docs
     # gnome-system-monitor
     # gnome-text-editor
     # gnome-calculator
@@ -26,32 +23,35 @@ let
     # gnome-contacts
     # gnome-maps
     # gnome-logs
-    # nautilus # file manager
-    # showtime # video player
-    # papers # document viewer
     # loupe # image viewer
+    # nautilus # file manager
+    # papers # document viewer
+    simple-scan # document scanner
+    snapshot # camera
+    # showtime # video player
+    yelp # help viewer
   ];
 
   extraPackages = with pkgs; [
-    newsflash # rss reader
-    fragments # torrent client
-    errands # reminders app
     apostrophe # markdown editor
+    # blanket # ambient sounds
+    # collision # verify file hashes
+    dconf-editor
     deja-dup # backup tool
-    resources # resource monitor
-    blanket # ambient sounds
-    collision # verify file hashes
     dialect # translation
-    eyedropper # color picker
-    impression # create bootable drives
-    keypunch # practice typing
-    komikku # comic reader
-    shortwave # radio player
-    valuta # currency converter
-    wike # wikipedia reader
+    # errands # reminders app
+    # eyedropper # color picker
+    fragments # torrent client
     gnome-podcasts # podcast player
     gnome-tweaks
-    dconf-editor
+    # impression # create bootable drives
+    komikku # comic reader
+    # keypunch # practice typing
+    newsflash # rss reader
+    resources # resource monitor
+    shortwave # radio player
+    # valuta # currency converter
+    # wike # wikipedia reader
   ];
 in
 
