@@ -9,6 +9,7 @@
       url = "github:nix-community/NUR";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    nix-flatpak.url = "github:gmodena/nix-flatpak/?ref=latest";
     home-manager = {
       url = "github:nix-community/home-manager/release-25.11";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -24,6 +25,7 @@
       self,
       nixpkgs,
       nixpkgs-unstable,
+      nix-flatpak,
       home-manager,
       ...
     }@inputs:
@@ -49,6 +51,7 @@
                   })
                 ];
               }
+              nix-flatpak.nixosModules.nix-flatpak
               ./configuration.nix
               home-manager.nixosModules.home-manager
               {
