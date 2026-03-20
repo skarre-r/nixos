@@ -84,7 +84,7 @@ in
     };
     excludePackages = [ pkgs.xterm ];
   };
-  services.printing.enable = true;
+  services.printing.enable = false;
   services.pulseaudio.enable = false;
   services.pipewire = {
     enable = true;
