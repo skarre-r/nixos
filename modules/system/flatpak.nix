@@ -1,7 +1,12 @@
 { pkgs, ... }:
-
+let
+  packages = [ ];
+in
 {
-  services.flatpak.enable = true;
+  services.flatpak = {
+    enable = true;
+    packages = packages;
+  };
 
   systemd.services.flatpak-repo = {
     wantedBy = [ "multi-user.target" ];
