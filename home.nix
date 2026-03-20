@@ -2,6 +2,7 @@
 let
   packages = with pkgs; [
     _1password-gui
+    _1password-cli
     sublime
     bruno
     libreoffice
@@ -13,12 +14,10 @@ let
     keymapp
     kontroll
     foliate
-    readest
     calibre
     bitwarden-desktop
     bitwarden-cli
     planify
-    refine
   ];
 in
 {
