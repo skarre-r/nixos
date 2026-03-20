@@ -1,6 +1,8 @@
 { pkgs, ... }:
 let
-  packages = [ ];
+  packages = [
+    "com.mattjakeman.ExtensionManager"
+  ];
 in
 {
   services.flatpak = {
