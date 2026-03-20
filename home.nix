@@ -18,6 +18,7 @@ let
     bitwarden-desktop
     bitwarden-cli
     planify
+    koreader
   ];
 in
 {
