@@ -12,6 +12,8 @@ let
     gnomeExtensions.run-or-raise
     gnomeExtensions.power-off-options
     gnomeExtensions.xremap
+    gnomeExtensions.dash2dock-lite
+    gnomeExtensions.search-light
 
     # themes
     whitesur-gtk-theme
