@@ -44,6 +44,7 @@ let
     fragments # torrent client
     gnome-podcasts # podcast player
     gnome-tweaks
+    # gnome-graphs # plot data
     # impression # create bootable drives
     komikku # comic reader
     # keypunch # practice typing
@@ -91,4 +92,5 @@ in
       };
     }
   ];
+  programs.geary.enable = false; # email client
 }
