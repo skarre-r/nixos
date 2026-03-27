@@ -18,7 +18,9 @@ let
     bitwarden-desktop
     bitwarden-cli
     planify
-    koreader
+    lnav
+    unstable.jetbrains.goland
+    unstable.jetbrains.datagrip
   ];
 in
 {
