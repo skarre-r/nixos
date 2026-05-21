@@ -21,6 +21,7 @@ let
     lnav
     unstable.jetbrains.goland
     unstable.jetbrains.datagrip
+    unstable.tutanota-desktop
   ];
 in
 {
