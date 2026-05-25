@@ -1,7 +1,8 @@
 { pkgs, ... }:
 let
   packages = [
-    "com.mattjakeman.ExtensionManager"
+    "io.freetubeapp.FreeTube"
+    "tv.plex.PlexDesktop"
   ];
 in
 {
