@@ -1,14 +1,13 @@
 { pkgs, ... }:
 let
   packages = with pkgs; [
-    _1password-gui
-    _1password-cli
+    unstable._1password-gui
+    unstable._1password-cli
     sublime
     bruno
     libreoffice
     gh
-    plex-desktop
-    signal-desktop
+    unstable.signal-desktop
     telegram-desktop
     slack
     keymapp
@@ -17,11 +16,14 @@ let
     calibre
     bitwarden-desktop
     bitwarden-cli
-    planify
+    unstable.planify
     lnav
     unstable.jetbrains.goland
     unstable.jetbrains.datagrip
     unstable.tutanota-desktop
+    transmission_4-gtk
+    # unstable.protonmail-desktop
+    # kdePackages.okular
   ];
 in
 {
@@ -67,11 +69,10 @@ in
   programs.fastfetch.enable = true;
   programs.fd.enable = true;
   programs.firefox.enable = false;
-  programs.fish = {
-    enable = true; # TODO
-    preferAbbrs = true;
+  programs.freetube = {
+    enable = false;
+    package = pkgs.unstable.freetube;
   };
-  programs.freetube.enable = true;
   programs.fzf = {
     enable = true;
     enableFishIntegration = true;
@@ -168,6 +169,18 @@ in
     enableFishIntegration = true;
   };
   programs.zsh.enable = true;
+  programs.lutris = {
+    enable = true;
+    package = pkgs.unstable.lutris;
+    steamPackage = pkgs.unstable.steam;
+  };
+  services.gammastep = {
+    enable = false;
+    tray = true;
+  };
+  services.wlsunset = {
+    enable = false;
+  };
 
   xdg.enable = true;
 
