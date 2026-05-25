@@ -60,7 +60,7 @@ in
   services.displayManager.gdm = {
     enable = true;
     wayland = true;
-    autoSuspend = true;
+    autoSuspend = false; # TODO
   };
   services.desktopManager.gnome.enable = true;
 
