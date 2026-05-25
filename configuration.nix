@@ -15,7 +15,7 @@ let
     eza
     fd
     fastfetch
-    go # TODO: (re)move?
+    unstable.go # TODO: (re)move?
     gopls # TODO: (re)move?
     golangci-lint
     jujutsu
@@ -116,7 +116,7 @@ in
     enable = false;
   };
   services.logind.settings.Login = {
-    HandleLidSwitch = "suspend";
+    HandleLidSwitch = "hibernate";
     HandleLidSwitchDocked = "ignore";
     HandleLidSwitchExternalPower = "lock";
   };
@@ -157,6 +157,14 @@ in
     };
     flake = null; # TODO: repo path
   };
+  programs.steam = {
+    enable = true;
+    package = pkgs.unstable.steam;
+  };
+  programs.nix-ld = {
+    enable = true;
+    libraries = [];
+  };
 
   environment.homeBinInPath = true;
   environment.localBinInPath = true;
@@ -191,6 +199,10 @@ in
   system.autoUpgrade.enable = false; # TODO?
 
   systemd.sleep.extraConfig = ''
+    AllowSuspend=no
+    AllowHibernation=yes
+    AllowHybridSleep=no
+    AllowSuspendThenHibernate=no
     HibernateDelaySec=10m
   '';
 
