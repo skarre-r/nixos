@@ -5,19 +5,13 @@ let
     gnomeExtensions.blur-my-shell
     gnomeExtensions.just-perfection
     gnomeExtensions.dash-to-dock
-    gnomeExtensions.user-themes
+    # gnomeExtensions.user-themes
     gnomeExtensions.gtile
-    gnomeExtensions.kiwi-is-not-apple
     gnomeExtensions.appindicator
     gnomeExtensions.run-or-raise
     gnomeExtensions.power-off-options
-    gnomeExtensions.xremap
-    gnomeExtensions.dash2dock-lite
+    # gnomeExtensions.xremap
     gnomeExtensions.search-light
-
-    # themes
-    whitesur-gtk-theme
-    whitesur-icon-theme
 
     # misc
     dconf2nix
@@ -38,8 +32,9 @@ in
         color-scheme = "prefer-dark";
         enable-animations = false;
         enable-hot-corners = false;
-        font-antialiasing = "rgba";
-        font-hinting = "full";
+        # TODO:
+        # font-antialiasing = "rgba";
+        # font-hinting = "slight";
         show-battery-percentage = true;
         text-scaling-factor = 1.0;
       };
@@ -48,8 +43,8 @@ in
         minimize = [ ];
       };
       "org/gnome/desktop/wm/preferences" = {
-        button-layout = "appmenu:minimize,maximize,close";
-        num-workspaces = 1;
+        button-layout = "appmenu:minimize,close";
+        # num-workspaces = 1;
       };
       "org/gnome/mutter" = {
         dynamic-workspaces = false;
@@ -156,7 +151,6 @@ in
         #   "dash-to-dock@micxgx.gmail.com"
         #   "user-theme@gnome-shell-extensions.gcampax.github.com"
         #   "gTile@vibou"
-        #   "kiwi@kemma"
         #   "appindicatorsupport@rgcjonas.gmail.com"
         #   "run-or-raise@edvard.cz"
         # ];
@@ -254,21 +248,6 @@ in
         expand-right = [ ];
       };
       # "org/gnome/shell/extensions/just-perfection" = {};
-      "org/gnome/shell/extensions/kiwi" = {
-        add-username-to-quick-menu = false;
-        battery-percentage = true;
-        button-type = "titlebuttons-alt";
-        enable-firefox-styling = true;
-        enable-launchpad-app = false;
-        hide-activities-button = false;
-        lock-icon = false;
-        move-calendar-right = false;
-        move-window-to-new-workspace = false;
-        skip-overview-on-login = true;
-        transparent-move = false;
-        enable-app-window-buttons = false;
-        show-window-controls = false;
-      };
       "org/gtk/gtk4/settings/file-chooser" = {
         show-hidden = true;
       };
@@ -277,16 +256,17 @@ in
 
   gtk = {
     enable = true;
-    iconTheme = {
-      name = "WhiteSur";
-      package = pkgs.whitesur-icon-theme;
-    };
+    # iconTheme = {
+    #   name = "WhiteSur";
+    #   package = pkgs.whitesur-icon-theme;
+    # };
   };
 
   programs.gnome-shell.enable = true;
   programs.gnome-terminal.enable = false;
 
   # TODO: https://github.com/CZ-NIC/run-or-raise
+  # TODO: freetube, planify, 1password
   xdg.configFile."run-or-raise/shortcuts.conf".text = ''
     <Shift><Ctrl><Super><Alt>g,ghostty,,
     <Shift><Ctrl><Super><Alt>f,nautilus,Org.gnome.Nautilus,
