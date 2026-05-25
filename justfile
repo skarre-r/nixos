@@ -16,6 +16,9 @@ rebuild:
 
 switch: rebuild
 
+rebuild2:
+    sudo nixos-rebuild switch --impure --flake .
+
 clean:
     sudo nh clean all --optimise --keep 3 --keep-since 24h
 
