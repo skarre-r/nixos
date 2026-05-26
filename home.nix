@@ -22,8 +22,7 @@ let
     unstable.jetbrains.datagrip
     unstable.tutanota-desktop
     transmission_4-gtk
-    # unstable.protonmail-desktop
-    # kdePackages.okular
+    unstable.mullvad-browser
   ];
 in
 {
